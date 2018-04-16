@@ -82,7 +82,7 @@ namespace WolfCurses
         ///     is no hang in the simulation or logic controllers and everything is moving along and waiting for input or
         ///     displaying something to user.
         /// </summary>
-        internal string TickPhase { get; private set; }
+        public string TickPhase { get; private set; }
 
         /// <summary>
         ///     Total number of ticks that have gone by from measuring system ticks, this means this measures the total number of
@@ -192,7 +192,7 @@ namespace WolfCurses
         ///     Fired when the simulation is closing and needs to clear out any data structures that it created so the program can
         ///     exit cleanly.
         /// </summary>
-        public void Destroy()
+        public virtual void Destroy()
         {
             // Set flag that we are closing now so we can ignore ticks during shutdown.
             IsClosing = true;

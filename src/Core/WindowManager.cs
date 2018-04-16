@@ -62,7 +62,7 @@ namespace WolfCurses.Core
         /// <summary>
         ///     Retrieves the total number of windows that the manager is currently handling.
         /// </summary>
-        internal int Count
+        public int Count
         {
             get { return windowList.Count; }
         }
@@ -72,7 +72,7 @@ namespace WolfCurses.Core
         ///     Windows
         ///     to be attached and or active move to not be null.
         /// </summary>
-        internal bool AcceptingInput
+        public bool AcceptingInput
         {
             get
             {
